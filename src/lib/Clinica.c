@@ -9,7 +9,7 @@ int menu(int *cmd)
     printf("[2] Consultar pacientes cadastrados\n");
     printf("[3] Vacinar paciente\n");
     printf("[4] Consultar pacientes vacinados\n");
-    printf("[0] Sair");
+    printf("[0] Sair\n");
 
     scanf("%d", cmd);
 }

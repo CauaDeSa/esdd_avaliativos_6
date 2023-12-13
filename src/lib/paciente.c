@@ -13,7 +13,7 @@ void criar_paciente(Paciente *p, int num_sus, int idade, bool dados[])
     *p = malloc(sizeof(struct paciente));
     (*p)->num_sus = num_sus;
     (*p)->idade = idade;
-    (*p)->prioridade = 0;
+    (*p)->prioridade = -1;
 
 
     for (int i = 0; i < 9; i++)

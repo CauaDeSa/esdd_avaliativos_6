@@ -1,23 +1,20 @@
 #include "../include/paciente.h"
 
-struct paciente
-{
+struct paciente {
     int num_sus;
     int idade;
     int prioridade;
     int dados[9];
 };
 
-void criar_paciente(Paciente *p, int num_sus, int idade, bool dados[])
+void criar_paciente(Paciente* p, int num_sus, int idade, bool dados[])
 {
     *p = malloc(sizeof(struct paciente));
     (*p)->num_sus = num_sus;
     (*p)->idade = idade;
-    (*p)->prioridade = -1;
+    (*p)->prioridade = -2;
 
-
-    for (int i = 0; i < 9; i++)
-    {
+    for (int i = 0; i < 9; i++) {
         (*p)->dados[i] = dados[i];
     }
 
@@ -28,24 +25,33 @@ void calcular_prioridade(Paciente p)
 {
 
     int i = 0;
-    while (p->prioridade != i){
-        i++;
+    bool find = false;
 
-        if (i == 1){
-            if (p->dados[i] == true) {
-                p->prioridade = i;
-            } else if (p->idade >= 60) {
-                i++;
-                p->prioridade = i;
+    if (p->idade >= 60) {
+        p->prioridade = 2;
+        find = true;
+    } else {
+        while (!find && i < 10) {
+            if (i == 1) {
+                if (p->dados[i] == true) {
+                    i++;
+                    p->prioridade = i+1;
+                    find = true;
+                } else {
+                    i++;
+                }
             } else {
-                i++;
+                if (p->dados[i] == true) {
+                    p->prioridade = i+1;
+                    find = true;
+                }
             }
-        } else {
-            if (p->dados[i] == true) {
-                p->prioridade = i;
-            }
+
+            i++;
         }
     }
+
+
 }
 
 int get_prioridade(Paciente p)
@@ -55,9 +61,9 @@ int get_prioridade(Paciente p)
 
 char* to_string_paciente(Paciente p)
 {
-    char *string = malloc(sizeof(char) * 100);
+    char* string = malloc(sizeof(char) * 100);
 
-    sprintf(string, "Número do SUS: %d\nIdade: %d\nPrioridade: %d\n", p->num_sus, p->idade, p->prioridade);
+    sprintf(string, "Numero do SUS: %d\nIdade: %d\nPrioridade: %d\n", p->num_sus, p->idade, p->prioridade);
 
     return string;
 }

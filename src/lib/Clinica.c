@@ -9,7 +9,7 @@ int menu(int *cmd)
     printf("[2] Consultar pacientes cadastrados\n");
     printf("[3] Vacinar paciente\n");
     printf("[4] Consultar pacientes vacinados\n");
-    printf("[0] Sair");
+    printf("[0] Sair\n");
 
     scanf("%d", cmd);
 }
@@ -21,15 +21,15 @@ void cadastrar(Pacientes list)
     int aux;
     bool dados[9] = {false};
     char *tipos[9] = {
-        "Trabalhador da área da Saúde",
-        "Indígena",
+        "Trabalhador da area da Saude",
+        "Indigena",
         "Ribeirinho",
         "Quilombola",
-        "Trabalha na área da Educação",
-        "Tem deficiência severa",
-        "Trabalha na área de Segurança",
-        "Trabalha em segmento penitenciário",
-        "É detento"};
+        "Trabalha na area da Educacao",
+        "Tem deficiencia severa",
+        "Trabalha na area de Seguranca",
+        "Trabalha em segmento penitenciario",
+        "Eh detento"};
 
     printf("Numero do SUS: ");
     scanf("%d", &numero_sus);
@@ -39,7 +39,7 @@ void cadastrar(Pacientes list)
 
     for (int i = 0; i < 9; i++)
     {
-        printf("%s [(1) Sim - (0) Não] : ", tipos[i]);
+        printf("%s [(1) Sim - (0) Nao] : ", tipos[i]);
         scanf("%d", &aux);
         dados[i] = (aux == 1) ? true : false;
     }

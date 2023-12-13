@@ -1,5 +1,5 @@
-typedef struct cadastro *Cadastro;
+#include "include.h"
 
-typedef struct queue *Queue;
+typedef struct queue *Pacientes;
 
 typedef struct node *Node;

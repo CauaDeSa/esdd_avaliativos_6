@@ -1,5 +1,4 @@
 #include "../include/stack.h"
-#include "../include/paciente.h"
 
 struct node
 {

@@ -9,8 +9,8 @@ int main()
 
     int cmd;
 
-    queue_init(&list);
-    stack_init(&vacinados);
+    init_queue(&list);
+    init_stack(&vacinados);
 
     do {
         

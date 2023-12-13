@@ -55,16 +55,16 @@ char* consultar(Pacientes list)
     Pacientes pacientes;
     char *string = (char *)malloc(sizeof(char) * 1000);
 
-    queue_init(&pacientes);
+    init_queue(&pacientes);
 
-    while (!queue_is_empty(list))
+    while (!is_empty_queue(list))
     {
         Paciente paciente = dequeue(list);
         snprintf(string, 1000, "%s\n%s", string, to_string_paciente(paciente));
         insert_priority_list(pacientes, paciente);
     }
 
-    while(!queue_is_empty(pacientes)){
+    while(!is_empty_queue(pacientes)){
         Paciente paciente = dequeue(pacientes);
         insert_priority_list(list, paciente);
     }
@@ -75,22 +75,22 @@ char* consultar(Pacientes list)
 void vacinar(Pacientes list, Pilha vacinados)
 {
     Paciente paciente = dequeue(list);
-    enqueue(vacinados, paciente);
+    push(vacinados, paciente);
 }
 
 char* consultar_vacinados(Pilha vacinados){
     Pilha aux;
     char *string = (char *)malloc(sizeof(char) * 1000);
-    stack_init(&aux);
+    init_stack(&aux);
 
-    while(!stack_is_empty(vacinados)){
+    while(!is_empty_stack(vacinados)){
         Paciente paciente = pop(vacinados);
 
         snprintf(string, 1000, "%s\n%s", string, to_string_paciente(paciente));
         push(aux, paciente);
     }
 
-    while(!stack_is_empty(aux)){
+    while(!is_empty_stack(aux)){
         Paciente paciente = pop(aux);
         push(vacinados, paciente);
     }

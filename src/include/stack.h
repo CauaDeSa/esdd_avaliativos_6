@@ -1,4 +1,5 @@
 #include "include.h"
+#include "paciente.h"
 
 // Estrutura de dados para a pilha.
 typedef struct stack *Pilha;

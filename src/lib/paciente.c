@@ -21,7 +21,7 @@ void criar_paciente(Paciente *p, int num_sus, int idade, bool dados[])
         (*p)->dados[i] = dados[i];
     }
 
-    calcular_prioridade(p);
+    calcular_prioridade(*p);
 }
 
 void calcular_prioridade(Paciente p)

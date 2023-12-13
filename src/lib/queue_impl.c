@@ -1,5 +1,4 @@
 #include "../include/queue.h"
-#include "../include/paciente.h"
 
 struct queue{
     Node head;

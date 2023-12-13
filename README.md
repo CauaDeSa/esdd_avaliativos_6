@@ -6,7 +6,7 @@
 Enunciado do problema:
 
 O Governo Federal lançou em 16/12/2020 o Plano Nacional de Operacionalização da Vacinação
-conta a Covid-19. Nesse documento foram definidos os grupos prioritários para receberem a vacina
+contra a Covid-19. Nesse documento foram definidos os grupos prioritários para receberem a vacina
 contra o Covid-19, o qual é simplificado na Tabela 1, que é baseada no Anexo II do documento.
 
 Tabela 1: Grupo prioritário para vacinação do COVID-19
@@ -32,7 +32,6 @@ Prioridade População:
     9 Funcionários do sistema penitenciário
 
     10 População privada de liberdade
-
 
 Um posto de saúde te contratou como desenvolvedor de sistemas para organizar a fila de pacientes
 que poderão receber a vacina. Cada paciente do posto de saúde respondeu o questionário disponível no

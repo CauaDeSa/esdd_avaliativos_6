@@ -28,8 +28,13 @@ void calcular_prioridade(Paciente p)
     bool find = false;
 
     if (p->idade >= 60) {
-        p->prioridade = 2;
-        find = true;
+        if (p->dados[0] == true) {
+            p->prioridade = 1;
+            find = true;
+        } else {
+            p->prioridade = 2;
+            find = true;
+        }
     } else {
         while (!find && i < 10) {
             if (i == 1) {

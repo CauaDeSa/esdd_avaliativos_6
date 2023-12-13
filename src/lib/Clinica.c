@@ -54,9 +54,9 @@ char* consultar(Pacientes list)
 {
     Pacientes pacientes;
     char *string = (char *)malloc(sizeof(char) * 1000);
+    snprintf(string, 1000, "");
 
     init_queue(&pacientes);
-
     while (!is_empty_queue(list))
     {
         Paciente paciente = dequeue(list);

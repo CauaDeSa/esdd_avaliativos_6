@@ -37,12 +37,12 @@ void insert_priority_list(Pacientes list, Paciente novo_paciente){
             Node walker = list->head;
             Node stalker = NULL;
 
-            while(get_prioridade(walker->paciente) >= get_prioridade(new_node->paciente) && walker->next != NULL){
+            while(get_prioridade(walker->paciente) <= get_prioridade(new_node->paciente) && walker->next != NULL){
                 stalker = walker;
                 walker = walker->next;
             }
 
-            if(get_prioridade(walker->paciente) < get_prioridade(new_node->paciente)){
+            if(get_prioridade(walker->paciente) > get_prioridade(new_node->paciente)){
                 //Insere o novo antes do walker.
                 if(stalker == NULL){
                     //Insere o novo no início da lista

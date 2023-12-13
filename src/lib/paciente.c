@@ -50,9 +50,9 @@ void calcular_prioridade(Paciente p)
                     p->prioridade = i+1;
                     find = true;
                 }
-            }
 
-            i++;
+                i++;
+            }
         }
     }
 

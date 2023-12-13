@@ -56,7 +56,9 @@ void calcular_prioridade(Paciente p)
         }
     }
 
-
+    if (!find) {
+        p->prioridade = 11;
+    }
 }
 
 int get_prioridade(Paciente p)

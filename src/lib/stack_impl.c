@@ -20,12 +20,12 @@ void init_stack(Pilha *p)
     (*p)->top = NULL;
 }
 
-bool isFull(Pilha p)
+bool is_full_stack(Pilha p)
 {
     return false;
 }
 
-bool isEmpty(Pilha p)
+bool is_empty_stack(Pilha p)
 {
     return p->top == NULL;
 }

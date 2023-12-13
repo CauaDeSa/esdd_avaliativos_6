@@ -17,11 +17,11 @@ void init_queue(Pacientes *list){
     (*list)->tail = NULL;
 }
 
-bool isFull(Pacientes list){
+bool is_full_queue(Pacientes list){
     return false;
 }
 
-bool isEmpty(Pacientes list){
+bool is_empty_queue(Pacientes list){
     return list->head == NULL;
 }
 

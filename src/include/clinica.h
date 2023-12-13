@@ -12,5 +12,8 @@ void cadastrar();
 // Função responsável por exibir os pacientes cadastrados.
 char* consultar(Pacientes list);
 
+// Função responsável por exibir os pacientes já vacinados.
+char* consultar_vacinados(Pilha vacinados);
+
 // Função responsável por exibir os pacientes vacinados.
 void vacinar(Pacientes list, Pilha vacinados);

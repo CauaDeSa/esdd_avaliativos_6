@@ -1,5 +1,5 @@
-# mingw32-make win
-# make all
+# mingw32-make
+# make
 
 SRC		=	./src/main.c	\
 			./src/lib/*c	\
@@ -19,6 +19,3 @@ all		:	$(NAME)
 $(NAME)	:	$(OBJ)
 			$(CC) -o $(NAME) $(SRC) $(CFLAGS)
 
-win		:
-			$(CC) -o $(NAME)_win $(SRC) $(CFLAGS)
-			cls

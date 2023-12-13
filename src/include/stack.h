@@ -10,10 +10,10 @@ typedef struct node *Node;
 void init_stack(Pilha *p);
 
 // Função para verificar se a pilha de vacinados está cheia.
-bool isFull(Pilha p);
+bool is_full_stack(Pilha p);
 
 // Função para verificar se a pilha de vacinados está vazia.
-bool isEmpty(Pilha p);
+bool is_empty_stack(Pilha p);
 
 // Função para inserir um paciente na pilha de vacinados.
 void push(Pilha p, Paciente novo_paciente);

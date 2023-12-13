@@ -10,10 +10,10 @@ typedef struct node *Node;
 void init_queue(Pacientes *list);
 
 // Função para verificar se a fila está cheia.
-bool isFull(Pacientes list);
+bool is_full_queue(Pacientes list);
 
 // Função para verificar se a fila está vazia.
-bool isEmpty(Pacientes list);
+bool is_empty_queue(Pacientes list);
 
 // Função para inserir um paciente prioritariamente na fila de pacientes.
 void insert_priority_list(Pacientes list, Paciente novo_paciente);

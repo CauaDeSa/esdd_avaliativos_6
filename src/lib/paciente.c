@@ -5,17 +5,18 @@ struct paciente
     int num_sus;
     int idade;
     int prioridade;
-    int dados[10];
+    int dados[9];
 };
 
-void criar_paciente(Paciente *p, int num_sus, int idade, bool dados[10])
+void criar_paciente(Paciente *p, int num_sus, int idade, bool dados[])
 {
     *p = malloc(sizeof(struct paciente));
     (*p)->num_sus = num_sus;
     (*p)->idade = idade;
     (*p)->prioridade = 0;
 
-    for (int i = 0; i < 10; i++)
+
+    for (int i = 0; i < 9; i++)
     {
         (*p)->dados[i] = dados[i];
     }
@@ -50,4 +51,13 @@ void calcular_prioridade(Paciente p)
 int get_prioridade(Paciente p)
 {
     return p->prioridade;
+}
+
+char* to_string_paciente(Paciente p)
+{
+    char *string = malloc(sizeof(char) * 100);
+
+    sprintf(string, "Número do SUS: %d\nIdade: %d\nPrioridade: %d\n", p->num_sus, p->idade, p->prioridade);
+
+    return string;
 }

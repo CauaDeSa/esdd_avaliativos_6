@@ -1,91 +1,62 @@
 # esdd_avaliativos_6
 
+## Projeto
+
+O projeto é uma simulação de um sistema de um posto de saude, para especidicamente, vacinação. Utilizando conceitos de estrutura de dados e a linguagem C.
+
+## Autores e Contato:
+
+O projeto foi desenvolvido pelos seguintes alunos do IFSP, Campus Araraquara, no segundo semestre de 2023:
+
 - [Cauã Rufino de Sá](https://github.com/CauaDeSa)
 - [Igor Filipi Cardoso](https://github.com/IgorFilipiCardoso)
 
-Enunciado do problema:
+### 1. Baixar:
 
-O Governo Federal lançou em 16/12/2020 o Plano Nacional de Operacionalização da Vacinação
-contra a Covid-19. Nesse documento foram definidos os grupos prioritários para receberem a vacina
-contra o Covid-19, o qual é simplificado na Tabela 1, que é baseada no Anexo II do documento.
+Para realizar o download, baixe ou clone o repositório.
 
-Tabela 1: Grupo prioritário para vacinação do COVID-19
+### 2. Compilar e Instalar:
 
-Prioridade População:
+Basta dar o comando:
 
-    1 Trabalhadores da saúde
+- Para Windows:
 
-    2 Idosos (idade acima de 60 anos)
+  ```bash
+  mingw32-make
+  ```
 
-    3 População indígena
+- Para Linux:
 
-    4 População ribeirinha e quilombola
+  ```bash
+  make
+  ```
 
-    5 Grupo com comorbidades
+### 3. Executar:
 
-    6 Trabalhadores da educação
+Pode-se executar abrindo o executável criado após a compilação ou utilizando o terminal:
 
-    7 Pessoas com deficiência permanente severa
+- Para Windows:
 
-    8 Força de segurança e salvamento
+  ```bash
+  ./Posto_de_saude.exe
+  ```
 
-    9 Funcionários do sistema penitenciário
+- Para Linux:
 
-    10 População privada de liberdade
+  ```bash
+  ./Posto_de_saude
+  ```
 
-Um posto de saúde te contratou como desenvolvedor de sistemas para organizar a fila de pacientes
-que poderão receber a vacina. Cada paciente do posto de saúde respondeu o questionário disponível no
-Quadro 1 com seus dados. 
+## Screenshots:
 
-Quadro 1: Questionário de paciente:
+![Sistema Rodando](https://i.imgur.com/YzgGqB8.png)
+![Fila de espera](https://i.imgur.com/Sbgy63a.png)
+![Pilha de vacinados](https://i.imgur.com/Maw5b3A.png)
 
-    Número SUS: xxxxxxxxxxx
-    Idade em anos: xxx
-    Traba. saúde: ( ) SIM ( ) NÃO
-    Indígena: ( ) SIM ( ) NÃO
-    Ribeirinho: ( ) SIM ( ) NÃO
-    Quilombola: ( ) SIM ( ) NÃO
-    Traba. Educação: ( ) SIM ( ) NÃO
-    Deficiência Severa: ( ) SIM ( ) NÃO
-    Força Segurança: ( ) SIM ( ) NÃO
-    Traba. Penitenciário: ( ) SIM ( ) NÃO
-    Detento: ( ) SIM ( ) NÃO
+## Descrição do Projeto:
 
+Todo o projeto foi desenvolvido em torno do conseito de TAD, utilizando estrutura de dados, sendo elas, a Pilha, a Fila e a Lista Duplamente Encadeada. Foram utilizados outros TAD para representar outras entidades dentro do sistema, como o Paciente. 
 
-No projeto de software definido pelos engenheiros estão previstas as implementações dos
-seguintes tipos abstratos de dados:
+## Detalhes da Metodologia de Desenvolvimento:
 
-1. Paciente para armazenamento dos dados dos pacientes;
-
-2. Fila que utiliza lista simplesmente encadeada com controle de cabeça e calda para armazenar dos
-pacientes que receberão a vacina;
-
-3. Pilha que armazena os dados dos pacientes que já foram vacinados. A pilha é implementada
-utilizando o conceito de lista simplesmente encadeada.
-
-
-Ainda no projeto de software foi especificado:
-
-• A fila de pacientes será “carregada” de acordo com as respostas ao questionário, contudo, a fila
-deve estar classificada de acordo com a prioridade do paciente e pela ordem de resposta ao
-questionário. Por exemplo, se o primeiro paciente for do grupo 2, e outro paciente do grupo 1
-chegar o paciente do grupo 1 deve entrar na frente do paciente do grupo 2, por outro lado, caso
-outro paciente do grupo 2 chegue, esse será alocado após o último paciente do grupo 2.
-
-• Deve existir apenas uma fila de vacinação.
-
-• Deve existir apenas uma pilha de vacinados.
-
-• A implementação dos TAD deve ser realizada separando os interesses, de forma que não haja
-manipulação de dados de pacientes nos TAD Fila ou Pilha.
-
-• O paciente sai da fila de vacinação para ser vacinado. Após a vacinação os dados do paciente
-entram em uma pilha para que o Ministério da Saúde consiga controlar, a qualquer momento, qual
-o grupo de prioridades já foi atendido.
-
-• Assim que é vacinado deve-se armazenar o lote da vacina que o paciente recebeu.
-
-• Existe um menu de opções que permite a operação de todas as opções do sistema.
-
-Implemente o sistema para o posto de saúde em linguagem C considerando boas práticas de programação
-e a separação de arquivos.
+A divisão de trabalhos funcionou de forma conjunto, ambos fizemos ao mesmo tempo, trocando informações sobre cada parte e ambos implementando uma parte do código. Utilizamos o GitHub e o LiveShare para o densenvolvimento em conjunto. 

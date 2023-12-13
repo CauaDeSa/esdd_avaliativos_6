@@ -18,4 +18,3 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJ)
 			$(CC) -o $(NAME) $(SRC) $(CFLAGS)
-

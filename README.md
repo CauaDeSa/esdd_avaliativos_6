@@ -1,10 +1,10 @@
 # esdd_avaliativos_6
 
-## Projeto
+## Projeto:
 
 O projeto é uma simulação de um sistema de um posto de saude, para especidicamente, vacinação. Utilizando conceitos de estrutura de dados e a linguagem C.
 
-## Autores e Contato:
+## Autores:
 
 O projeto foi desenvolvido pelos seguintes alunos do IFSP, Campus Araraquara, no segundo semestre de 2023:
 

@@ -81,6 +81,8 @@ void vacinar(Pacientes list, Pilha vacinados)
 char* consultar_vacinados(Pilha vacinados){
     Pilha aux;
     char *string = (char *)malloc(sizeof(char) * 1000);
+    snprintf(string, 1000, "");
+    
     init_stack(&aux);
 
     while(!is_empty_stack(vacinados)){
